@@ -1575,8 +1575,21 @@ body {
     }
 
     /* === REVIEWS === */
+    .reviews-marquee-wrapper {
+        -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+        mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    }
+    .reviews-marquee-track {
+        gap: 16px;
+        padding-right: 16px;
+    }
     .review-card {
-        width: 300px;
+        width: 270px;
+        padding: 24px 20px;
+        gap: 16px;
+    }
+    .review-text {
+        font-size: 0.85rem;
     }
 
     /* === FLIGHT SEARCH === */
