@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DND Travels | Premium Vehicle Rentals & Tour Packages Tamil Nadu</title>
+    <meta name="description" content="Experience futuristic luxury travel in Tamil Nadu. Premium car rentals, tempo travellers, and custom tour packages by DND Travels.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Styleheet -->
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+
+    <!-- Particle Background Canvas -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Floating Glassmorphism Navbar -->
+    <nav class="navbar" id="main-navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" id="nav-logo">
+                <span class="logo-accent">DND</span>TRAVELS
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#vehicles">Fleet</a></li>
+                <li><a href="#packages">Tour Packages</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#booking" class="nav-cta">Book Now <i class="fa-brands fa-whatsapp"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section" id="home">
+        <div class="hero-slideshow" id="hero-slideshow">
+            <img src="assets/hero_bg.png" alt="Futuristic ECR highway Chennai Tamil Nadu" class="hero-slide active">
+            <img src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?q=80&w=1920&auto=format&fit=crop" alt="Ooty Hills Tea Gardens" class="hero-slide">
+            <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=1920&auto=format&fit=crop" alt="Tamil Nadu Temple Heritage" class="hero-slide">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="pulse-dot"></span> TN's Premier Luxury Travel Startup
+            </div>
+            <h1 class="hero-title">Travel Beyond <span class="text-gradient">Limits</span></h1>
+            <p class="hero-subtitle">Premium Vehicle Rentals & Tour Packages Across Tamil Nadu. Experience state-of-the-art travel, tailored for the elite.</p>
+            <div class="hero-ctas">
+                <a href="#booking" class="btn btn-primary btn-glow">Book Instantly</a>
+                <a href="#packages" class="btn btn-secondary">Explore Packages</a>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <a href="#features"><i class="fa-solid fa-chevron-down animated-bounce"></i></a>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="section-container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Redefining <span class="text-gradient">Travel Systems</span></h2>
+                <p class="section-subtitle">Experience next-generation service layers tailored for corporate, wedding, and leisure travels.</p>
+            </div>
+            <div class="features-grid">
+                <!-- Feature Card 1 -->
+                <div class="feature-card glass-card">
+                    <div class="feature-icon-wrapper cyan-glow">
+                        <i class="fa-solid fa-car-side"></i>
+                    </div>
+                    <h3 class="feature-card-title">Luxury Car Rentals</h3>
+                    <p class="feature-card-desc">Drive the finest SUVs and sedans. Handpicked premium fleet for ultimate comfort and status.</p>
+                </div>
+                <!-- Feature Card 2 -->
+                <div class="feature-card glass-card">
+                    <div class="feature-icon-wrapper gold-glow">
+                        <i class="fa-solid fa-bus"></i>
+                    </div>
+                    <h3 class="feature-card-title">Tempo Traveller Booking</h3>
+                    <p class="feature-card-desc">State-of-the-art customized coaches with lounge seating, ambient lighting, and high-fidelity sound.</p>
+                </div>
+                <!-- Feature Card 3 -->
+                <div class="feature-card glass-card">
+                    <div class="feature-icon-wrapper cyan-glow">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <h3 class="feature-card-title">Tourist Packages</h3>
+                    <p class="feature-card-desc">Curated experiential tours to misty hills, majestic temples, and coastal highways of Tamil Nadu.</p>
+                </div>
+                <!-- Feature Card 4 -->
+                <div class="feature-card glass-card">
+                    <div class="feature-icon-wrapper gold-glow">
+                        <i class="fa-solid fa-plane-departure"></i>
+                    </div>
+                    <h3 class="feature-card-title">Airport Pickup & Drop</h3>
+                    <p class="feature-card-desc">Reliable, on-time airport transfers in Chennai, Coimbatore, Madurai, and Trichy airports.</p>
+                </div>
+                <!-- Feature Card 5 -->
+                <div class="feature-card glass-card">
+                    <div class="feature-icon-wrapper cyan-glow">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h3 class="feature-card-title">Corporate Mobility</h3>
+                    <p class="feature-card-desc">Seamless enterprise transportation with dedicated coordinators and transparent automated invoicing.</p>
+                </div>
+                <!-- Feature Card 6 -->
+                <div class="feature-card glass-card">
+                    <div class="feature-icon-wrapper gold-glow">
+                        <i class="fa-solid fa-gifts"></i>
+                    </div>
+                    <h3 class="feature-card-title">Wedding Premium Fleet</h3>
+                    <p class="feature-card-desc">Make your special day memorable with premium vintage cars and luxury fleets for wedding guests.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vehicle Showcase Section -->
+    <section class="vehicles-section" id="vehicles">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">The <span class="text-gradient">Elite Fleet</span></h2>
+                <p class="section-subtitle">Exotic rentals configured to give you the highest degree of comfort and high-end startup feel.</p>
+                <!-- Filter Tabs -->
+                <div class="filter-tabs" id="fleet-filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All Fleet</button>
+                    <button class="filter-tab" data-filter="suv">SUVs</button>
+                    <button class="filter-tab" data-filter="sedan">Sedans</button>
+                    <button class="filter-tab" data-filter="coach">Luxury Coaches</button>
+                    <button class="filter-tab" data-filter="bike">Premium Bikes</button>
+                </div>
+            </div>
+
+            <div class="vehicles-grid" id="vehicles-grid">
+                <!-- Vehicle Card 1 (Thar SUV) -->
+                <div class="vehicle-card glass-card" data-category="suv">
+                    <div class="vehicle-img-wrapper">
+                        <img src="assets/suv_thar.png" alt="Mahindra Thar SUV Rental Tamil Nadu" class="vehicle-img">
+                        <span class="vehicle-tag">Popular SUV</span>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-name">Mahindra Thar 4x4</h3>
+                        <div class="vehicle-specs">
+                            <span><i class="fa-solid fa-users"></i> 4 Seats</span>
+                            <span><i class="fa-solid fa-gears"></i> Auto/Manual</span>
+                            <span><i class="fa-solid fa-gas-pump"></i> Diesel</span>
+                        </div>
+                        <div class="vehicle-footer">
+                            <div class="vehicle-price">
+                                <span class="price-val">₹3,500</span><span class="price-unit">/day</span>
+                            </div>
+                            <a href="#booking" class="btn btn-sm btn-outline-cyan book-trigger" data-vehicle="Mahindra Thar 4x4">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 2 (Tempo Traveller Coach) -->
+                <div class="vehicle-card glass-card" data-category="coach">
+                    <div class="vehicle-img-wrapper">
+                        <img src="assets/tempo_traveler.png" alt="Luxury Tempo Traveller Booking Tamil Nadu" class="vehicle-img">
+                        <span class="vehicle-tag">Lounge Coach</span>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-name">Luxe Tempo Traveller</h3>
+                        <div class="vehicle-specs">
+                            <span><i class="fa-solid fa-users"></i> 12-18 Seats</span>
+                            <span><i class="fa-solid fa-television"></i> Smart TV/WiFi</span>
+                            <span><i class="fa-solid fa-couch"></i> Recliner Seats</span>
+                        </div>
+                        <div class="vehicle-footer">
+                            <div class="vehicle-price">
+                                <span class="price-val">₹6,000</span><span class="price-unit">/day</span>
+                            </div>
+                            <a href="#booking" class="btn btn-sm btn-outline-gold book-trigger" data-vehicle="Luxe Tempo Traveller">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 3 (Luxury SUV) -->
+                <div class="vehicle-card glass-card" data-category="suv">
+                    <div class="vehicle-img-wrapper">
+                        <img src="assets/fortuner.png" alt="Toyota Fortuner Rental" class="vehicle-img">
+                        <span class="vehicle-tag">Premium SUV</span>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-name">Toyota Fortuner</h3>
+                        <div class="vehicle-specs">
+                            <span><i class="fa-solid fa-users"></i> 7 Seats</span>
+                            <span><i class="fa-solid fa-shield-halved"></i> Robust & Safe</span>
+                            <span><i class="fa-solid fa-wand-magic-sparkles"></i> VIP Comfort</span>
+                        </div>
+                        <div class="vehicle-footer">
+                            <div class="vehicle-price">
+                                <span class="price-val">₹6,000</span><span class="price-unit">/day</span>
+                            </div>
+                            <a href="#booking" class="btn btn-sm btn-outline-cyan book-trigger" data-vehicle="Toyota Fortuner">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 4 (Standard Comfort) -->
+                <div class="vehicle-card glass-card" data-category="sedan">
+                    <div class="vehicle-img-wrapper">
+                        <img src="assets/innova.png" alt="Toyota Innova Crysta Rental" class="vehicle-img">
+                        <span class="vehicle-tag">Comfort Travel</span>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-name">Toyota Innova Crysta</h3>
+                        <div class="vehicle-specs">
+                            <span><i class="fa-solid fa-users"></i> 7 Seats</span>
+                            <span><i class="fa-solid fa-suitcase"></i> Large Boot</span>
+                            <span><i class="fa-solid fa-gas-pump"></i> Diesel</span>
+                        </div>
+                        <div class="vehicle-footer">
+                            <div class="vehicle-price">
+                                <span class="price-val">₹4,500</span><span class="price-unit">/day</span>
+                            </div>
+                            <a href="#booking" class="btn btn-sm btn-outline-gold book-trigger" data-vehicle="Toyota Innova Crysta">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 5 (Standard Sedan) -->
+                <div class="vehicle-card glass-card" data-category="sedan">
+                    <div class="vehicle-img-wrapper">
+                        <img src="assets/dzire.png" alt="Maruti Suzuki Swift Dzire Rental" class="vehicle-img">
+                        <span class="vehicle-tag">Economy Sedan</span>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-name">Maruti Suzuki Swift Dzire</h3>
+                        <div class="vehicle-specs">
+                            <span><i class="fa-solid fa-users"></i> 4 Seats</span>
+                            <span><i class="fa-solid fa-suitcase"></i> Good Boot Space</span>
+                            <span><i class="fa-solid fa-gas-pump"></i> High Mileage</span>
+                        </div>
+                        <div class="vehicle-footer">
+                            <div class="vehicle-price">
+                                <span class="price-val">₹2,000</span><span class="price-unit">/day</span>
+                            </div>
+                            <a href="#booking" class="btn btn-sm btn-outline-gold book-trigger" data-vehicle="Maruti Suzuki Swift Dzire">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 6 (Premium Bike) -->
+                <div class="vehicle-card glass-card" data-category="bike">
+                    <div class="vehicle-img-wrapper">
+                        <img src="assets/enfield.png" alt="Royal Enfield Classic 350 Rental" class="vehicle-img">
+                        <span class="vehicle-tag">Classic Rider</span>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-name">Royal Enfield Classic 350</h3>
+                        <div class="vehicle-specs">
+                            <span><i class="fa-solid fa-users"></i> 2 Seats</span>
+                            <span><i class="fa-solid fa-motorcycle"></i> 350cc</span>
+                            <span><i class="fa-solid fa-helmet-safety"></i> 2 Helmets</span>
+                        </div>
+                        <div class="vehicle-footer">
+                            <div class="vehicle-price">
+                                <span class="price-val">₹1,000</span><span class="price-unit">/day</span>
+                            </div>
+                            <a href="#booking" class="btn btn-sm btn-outline-cyan book-trigger" data-vehicle="Royal Enfield Classic 350">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tour Packages Section -->
+    <section class="packages-section" id="packages">
+        <div class="section-container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Curated <span class="text-gradient">Expeditions</span></h2>
+                <p class="section-subtitle">Stunning landscapes and cultural epicenters of Tamil Nadu, mapped out in luxury itineraries.</p>
+            </div>
+
+            <div class="packages-grid">
+                <!-- Package 1 (Ooty) -->
+                <div class="package-card glass-card">
+                    <div class="package-img-box">
+                        <img src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?q=80&w=600&auto=format&fit=crop" alt="Ooty Hills Tour Package" class="package-img">
+                        <div class="package-meta">
+                            <span><i class="fa-regular fa-clock"></i> 3 Days / 2 Nights</span>
+                        </div>
+                    </div>
+                    <div class="package-body">
+                        <h3 class="package-title">Ooty: Misty Tea Gardens</h3>
+                        <p class="package-desc">Explore Pykara lake, botanical valleys, and ride the historic Nilgiri Mountain toy train.</p>
+                        <ul class="package-inclusions">
+                            <li><i class="fa-solid fa-circle-check"></i> Luxury SUV included</li>
+                            <li><i class="fa-solid fa-circle-check"></i> 4-Star Resort Stay</li>
+                        </ul>
+                        <div class="package-price-row">
+                            <div class="package-price">₹12,000 <span class="price-label">/ person</span></div>
+                            <a href="#booking" class="btn btn-sm btn-cyan package-book-trigger" data-package="Ooty: Misty Tea Gardens">Select</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 2 (Kodaikanal) -->
+                <div class="package-card glass-card">
+                    <div class="package-img-box">
+                        <img src="assets/kodaikanal.png" alt="Kodaikanal Tour Package" class="package-img">
+                        <div class="package-meta">
+                            <span><i class="fa-regular fa-clock"></i> 3 Days / 2 Nights</span>
+                        </div>
+                    </div>
+                    <div class="package-body">
+                        <h3 class="package-title">Kodaikanal: Princess of Valleys</h3>
+                        <p class="package-desc">Boating on Kodaikanal Lake, pine forest tours, hiking to Pillar Rocks, and campfire nights.</p>
+                        <ul class="package-inclusions">
+                            <li><i class="fa-solid fa-circle-check"></i> Chauffeur Driven SUV</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Premium Valley Cabins</li>
+                        </ul>
+                        <div class="package-price-row">
+                            <div class="package-price">₹11,500 <span class="price-label">/ person</span></div>
+                            <a href="#booking" class="btn btn-sm btn-gold package-book-trigger" data-package="Kodaikanal: Princess of Valleys">Select</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 3 (Yercaud) -->
+                <div class="package-card glass-card">
+                    <div class="package-img-box">
+                        <img src="https://images.unsplash.com/photo-1589308078059-be1415eab4c3?q=80&w=600&auto=format&fit=crop" alt="Yercaud Tour Package" class="package-img">
+                        <div class="package-meta">
+                            <span><i class="fa-regular fa-clock"></i> 2 Days / 1 Night</span>
+                        </div>
+                    </div>
+                    <div class="package-body">
+                        <h3 class="package-title">Yercaud: Coffee Estate Escapes</h3>
+                        <p class="package-desc">Stroll through coffee trails, visit the Emerald Lake, and experience the Pagoda Point view.</p>
+                        <ul class="package-inclusions">
+                            <li><i class="fa-solid fa-circle-check"></i> Executive Sedan Fleet</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Colonial Estate Villa</li>
+                        </ul>
+                        <div class="package-price-row">
+                            <div class="package-price">₹7,500 <span class="price-label">/ person</span></div>
+                            <a href="#booking" class="btn btn-sm btn-cyan package-book-trigger" data-package="Yercaud: Coffee Estate Escapes">Select</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 4 (Rameswaram) -->
+                <div class="package-card glass-card">
+                    <div class="package-img-box">
+                        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=600&auto=format&fit=crop" alt="Rameswaram Tour Package" class="package-img">
+                        <div class="package-meta">
+                            <span><i class="fa-regular fa-clock"></i> 2 Days / 1 Night</span>
+                        </div>
+                    </div>
+                    <div class="package-body">
+                        <h3 class="package-title">Rameswaram: Spiritual Shores</h3>
+                        <p class="package-desc">Cross the iconic Pamban Bridge, witness Dhanushkodi ghost town, and holy Ramanathaswamy Temple.</p>
+                        <ul class="package-inclusions">
+                            <li><i class="fa-solid fa-circle-check"></i> Custom Cruiser Coach</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Beachfront Luxury Stay</li>
+                        </ul>
+                        <div class="package-price-row">
+                            <div class="package-price">₹9,000 <span class="price-label">/ person</span></div>
+                            <a href="#booking" class="btn btn-sm btn-gold package-book-trigger" data-package="Rameswaram: Spiritual Shores">Select</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 5 (Kanyakumari) -->
+                <div class="package-card glass-card">
+                    <div class="package-img-box">
+                        <img src="https://images.unsplash.com/photo-1596402184320-417e7178b2cd?q=80&w=600&auto=format&fit=crop" alt="Kanyakumari Tour Package" class="package-img">
+                        <div class="package-meta">
+                            <span><i class="fa-regular fa-clock"></i> 2 Days / 1 Night</span>
+                        </div>
+                    </div>
+                    <div class="package-body">
+                        <h3 class="package-title">Kanyakumari: Sun & Seas</h3>
+                        <p class="package-desc">Watch tri-sea sunrises, boat ride to Swami Vivekananda Memorial Rock, and visit Suchindram Temple.</p>
+                        <ul class="package-inclusions">
+                            <li><i class="fa-solid fa-circle-check"></i> Panoramic Window Coach</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Sunset View Premium Hotel</li>
+                        </ul>
+                        <div class="package-price-row">
+                            <div class="package-price">₹9,500 <span class="price-label">/ person</span></div>
+                            <a href="#booking" class="btn btn-sm btn-cyan package-book-trigger" data-package="Kanyakumari: Sun & Seas">Select</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 6 (Chennai City Tour) -->
+                <div class="package-card glass-card">
+                    <div class="package-img-box">
+                        <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=600&auto=format&fit=crop" alt="Chennai Tour Package" class="package-img">
+                        <div class="package-meta">
+                            <span><i class="fa-regular fa-clock"></i> 1 Day Tour</span>
+                        </div>
+                    </div>
+                    <div class="package-body">
+                        <h3 class="package-title">Chennai: Coastal Heritage</h3>
+                        <p class="package-desc">Explore Kapaleeshwarar temple, walk Chennai's historic Marina beach, and tour Mahabalipuram rocks.</p>
+                        <ul class="package-inclusions">
+                            <li><i class="fa-solid fa-circle-check"></i> Chauffeur Electric Sedan</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Traditional Coastal Lunch</li>
+                        </ul>
+                        <div class="package-price-row">
+                            <div class="package-price">₹4,000 <span class="price-label">/ person</span></div>
+                            <a href="#booking" class="btn btn-sm btn-gold package-book-trigger" data-package="Chennai: Coastal Heritage">Select</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Engine Section -->
+    <section class="booking-section" id="booking">
+        <div class="section-container">
+            <div class="booking-grid">
+                <!-- Booking Form Wrapper -->
+                <div class="booking-form-wrapper glass-card">
+                    <div class="form-header">
+                        <h2 class="form-title">Launch Your <span class="text-gradient">Expedition</span></h2>
+                        <p class="form-subtitle">Configure your trip layer. Confirm details to launch WhatsApp booking instantly.</p>
+                    </div>
+                    <form id="booking-form" class="booking-form">
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="booking-type"><i class="fa-solid fa-sliders"></i> Service Type</label>
+                                <select id="booking-type" required>
+                                    <option value="rental" selected>Vehicle Rental Fleet</option>
+                                    <option value="package">Tourism Package Tour</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="booking-selection"><i class="fa-solid fa-car"></i> Fleet / Package Choice</label>
+                                <select id="booking-selection" required>
+                                    <!-- Options filled dynamically by app.js -->
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="pickup-loc"><i class="fa-solid fa-location-dot"></i> Pickup Location</label>
+                                <select id="pickup-loc" required>
+                                    <option value="Chennai">Chennai (Airport / City)</option>
+                                    <option value="Coimbatore">Coimbatore (Airport / City)</option>
+                                    <option value="Madurai">Madurai (Airport / City)</option>
+                                    <option value="Trichy">Trichy (Airport / City)</option>
+                                    <option value="Ooty">Ooty Hills</option>
+                                    <option value="Kodaikanal">Kodaikanal</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="drop-loc"><i class="fa-solid fa-location-crosshairs"></i> Drop-off Location</label>
+                                <select id="drop-loc" required>
+                                    <option value="Chennai">Chennai</option>
+                                    <option value="Coimbatore">Coimbatore</option>
+                                    <option value="Madurai">Madurai</option>
+                                    <option value="Trichy">Trichy</option>
+                                    <option value="Ooty">Ooty Hills</option>
+                                    <option value="Kodaikanal">Kodaikanal</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="pickup-date"><i class="fa-regular fa-calendar-days"></i> Pickup Date</label>
+                                <input type="date" id="pickup-date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="passengers"><i class="fa-solid fa-user-group"></i> Passengers</label>
+                                <input type="number" id="passengers" min="1" max="50" value="1" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="cust-name"><i class="fa-solid fa-signature"></i> Your Name</label>
+                                <input type="text" id="cust-name" placeholder="Enter full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cust-phone"><i class="fa-solid fa-phone"></i> Phone Number</label>
+                                <input type="tel" id="cust-phone" placeholder="Enter contact number" required>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block btn-glow">
+                            <i class="fa-brands fa-whatsapp"></i> Confirm Booking on WhatsApp
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Booking Info & Stats -->
+                <div class="booking-stats-column">
+                    <div class="booking-pitch">
+                        <h3 class="pitch-title">Why Choose <span class="logo-accent">DND</span>?</h3>
+                        <p class="pitch-desc">We combine luxury high-end automotive fleets with flawless hospitality layers across Tamil Nadu's coordinates.</p>
+                    </div>
+                    <!-- Live Statistics Grid -->
+                    <div class="stats-grid" id="stats-counter-section">
+                        <div class="stat-box glass-card">
+                            <div class="stat-number text-gradient" data-target="15000">0</div>
+                            <div class="stat-label">Happy Explorers</div>
+                        </div>
+                        <div class="stat-box glass-card">
+                            <div class="stat-number text-gradient" data-target="250">0</div>
+                            <div class="stat-label">Luxury Vehicles</div>
+                        </div>
+                        <div class="stat-box glass-card">
+                            <div class="stat-number text-gradient" data-target="120">0</div>
+                            <div class="stat-label">Routes Covered</div>
+                        </div>
+                        <div class="stat-box glass-card">
+                            <div class="stat-number text-gradient" data-target="4.9">0</div>
+                            <div class="stat-label">Google Rating</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section" id="reviews">
+        <div class="section-container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Voices of <span class="text-gradient">Co-Travelers</span></h2>
+                <p class="section-subtitle">Explore real feedback logs from our premium clients, corporate heads, and tourists.</p>
+            </div>
+
+            <div class="reviews-slider">
+                <!-- Review Card 1 -->
+                <div class="review-card glass-card">
+                    <div class="review-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"Renting the Thar for our Ooty trip was the best decision. The vehicle was spotless, ran perfectly, and the booking system on WhatsApp was lightning fast. Extremely premium service!"</p>
+                    <div class="review-author">
+                        <div class="author-avatar cyan-glow"><i class="fa-regular fa-user"></i></div>
+                        <div class="author-info">
+                            <h4 class="author-name">Karthik Raja</h4>
+                            <span class="author-title">IT Executive, Chennai</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Card 2 -->
+                <div class="review-card glass-card">
+                    <div class="review-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"DND Travels managed transportation for our global client meeting. The Luxury Tempo Traveller was beautiful, like a private lounge. Highly recommended for corporate requirements!"</p>
+                    <div class="review-author">
+                        <div class="author-avatar gold-glow"><i class="fa-regular fa-user"></i></div>
+                        <div class="author-info">
+                            <h4 class="author-name">Deepika Sen</h4>
+                            <span class="author-title">HR Director, CTS Coimbatore</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Card 3 -->
+                <div class="review-card glass-card">
+                    <div class="review-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"Outstanding service! We booked their Kanyakumari package for my parents. Excellent hotels, professional driver who doubled as a local guide. Superb Dravidian heritage itinerary."</p>
+                    <div class="review-author">
+                        <div class="author-avatar cyan-glow"><i class="fa-regular fa-user"></i></div>
+                        <div class="author-info">
+                            <h4 class="author-name">Subramanian M.</h4>
+                            <span class="author-title">Business Owner, Madurai</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="section-container">
+            <div class="section-header text-center">
+                <h2 class="section-title">System <span class="text-gradient">Queries (FAQ)</span></h2>
+                <p class="section-subtitle">Clear information regarding security deposits, driver charges, and state permits.</p>
+            </div>
+
+            <div class="faq-list">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h3>What are the documents needed for self-drive vehicle rentals?</h3>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For self-drive rentals, you must provide a valid Indian Driving License (LVM), Aadhaar card, and a brief verification callback. Security deposits vary based on the class of vehicle selected.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h3>Are drivers included in the Tempo Traveller bookings?</h3>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, all our luxury customized Tempo Traveller and bus rentals are strictly chauffeur-driven. Our professional drivers have extensive experience traveling across the hilly terrain of Ooty, Kodaikanal, and Yercaud.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h3>Does the pricing include state toll tax and interstate permits?</h3>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>All Tamil Nadu state permits and tourist taxes are included in our packages. If you are crossing state borders (e.g. to Kerala, Karnataka, or Pondicherry), the custom permit fees will be updated on your WhatsApp bill quote.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h3>What is the cancellation and refund policy?</h3>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Cancellations made 48 hours prior to the scheduled pickup time receive a 100% refund. Cancellations inside 48 hours attract a minor 20% system booking retention charge.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand-column">
+                <a href="#" class="footer-logo"><span class="logo-accent">DND</span>TRAVELS</a>
+                <p class="footer-desc">Tamil Nadu's premium futuristic travel and vehicle rental startup. Travel beyond boundaries with ultimate luxury and tech-first service systems.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links-column">
+                <h4 class="footer-heading">Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#vehicles">Luxury Car Rental</a></li>
+                    <li><a href="#vehicles">Tempo Traveller Booking</a></li>
+                    <li><a href="#packages">Hills Packages Tour</a></li>
+                    <li><a href="#booking">Airport Transfers</a></li>
+                    <li><a href="#booking">Wedding Fleet Hire</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-column">
+                <h4 class="footer-heading">Destinations</h4>
+                <ul class="footer-links">
+                    <li><a href="#packages">Ooty Hills</a></li>
+                    <li><a href="#packages">Kodaikanal Valley</a></li>
+                    <li><a href="#packages">Yercaud Coffee Trails</a></li>
+                    <li><a href="#packages">Rameswaram Shore</a></li>
+                    <li><a href="#packages">Kanyakumari Sunrise</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact-column">
+                <h4 class="footer-heading">Hub Office (HQ)</h4>
+                <ul class="contact-info">
+                    <li><i class="fa-solid fa-location-dot"></i> ECR Road, Thiruvanmiyur, Chennai, Tamil Nadu - 600041</li>
+                    <li><i class="fa-solid fa-phone"></i> +91 93426 26096 / +91 95975 74989 / +91 63741 60068</li>
+                    <li><i class="fa-solid fa-envelope"></i> dnd.studio.in@gmail.com</li>
+                    <li><i class="fa-solid fa-clock"></i> Operations: 24/7 Live Layer</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 DND Travels. All rights reserved. Created in partnership with Antigravity AI.</p>
+        </div>
+    </footer>
+
+    <!-- Custom Script -->
+    <script src="app.js?v=3"></script>
+</body>
+</html>

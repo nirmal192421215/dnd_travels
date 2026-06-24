@@ -1,0 +1,10 @@
+services:
+  - type: cron
+    name: travel-flights-cron
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python3 execution/search_flights.py --origin MAA --destination DEL --departure-date 2026-07-01"
+    schedule: "0 0 * * *" # Run daily at midnight
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.12
