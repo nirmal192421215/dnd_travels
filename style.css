@@ -920,15 +920,39 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* --- Customer Reviews Section --- */
-.reviews-slider {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+/* --- Customer Reviews Section (Marquee) --- */
+.reviews-marquee-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
     margin-top: 40px;
+    padding: 10px 0;
+    /* Optional edge fade effect */
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.reviews-marquee-track {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    animation: scroll-marquee 25s linear infinite;
+    padding-right: 30px; /* Essential to match the gap for seamless looping */
+}
+
+.reviews-marquee-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-marquee {
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 .review-card {
+    width: 350px;
+    flex-shrink: 0;
     padding: 35px;
     display: flex;
     flex-direction: column;
@@ -1179,8 +1203,7 @@ body {
 @media (max-width: 1024px) {
     .features-grid,
     .vehicles-grid,
-    .packages-grid,
-    .reviews-slider {
+    .packages-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     
@@ -1552,9 +1575,8 @@ body {
     }
 
     /* === REVIEWS === */
-    .reviews-slider {
-        grid-template-columns: 1fr;
-        gap: 16px;
+    .review-card {
+        width: 300px;
     }
 
     /* === FLIGHT SEARCH === */
