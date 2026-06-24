@@ -1195,69 +1195,312 @@ body {
 }
 
 @media (max-width: 768px) {
+
+    /* === GLOBAL MOBILE FIX === */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    * {
+        max-width: 100%;
+        word-break: break-word;
+    }
+
+    .section-container {
+        padding: 60px 18px;
+    }
+
     .section-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
+        letter-spacing: 1px;
     }
-    
-    .hero-title {
-        font-size: 3rem;
+
+    .section-subtitle {
+        font-size: 0.95rem;
     }
-    
-    .hero-subtitle {
-        font-size: 1.1rem;
-    }
-    
+
+    /* === NAVBAR === */
     .navbar {
-        border-radius: 20px;
-        padding: 10px 20px;
+        top: 10px;
+        width: 94%;
+        border-radius: 16px;
+        padding: 12px 18px;
     }
-    
+
+    .navbar.scrolled {
+        top: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+
     .mobile-menu-btn {
         display: block;
     }
-    
+
+    .nav-logo {
+        font-size: 1.4rem;
+    }
+
     .nav-links {
-        position: absolute;
-        top: 80px;
+        position: fixed;
+        top: 0;
         left: 0;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.95);
+        width: 100vw;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
-        border: 1px solid var(--border-color);
-        border-radius: 20px;
         flex-direction: column;
-        padding: 30px;
-        gap: 20px;
-        transform: translateY(-20px);
+        justify-content: center;
+        align-items: center;
+        padding: 40px 30px;
+        gap: 28px;
+        transform: translateX(100%);
         opacity: 0;
         pointer-events: none;
-        box-shadow: 0 8px 30px rgba(0,0,0,0.05);
         transition: var(--transition-smooth);
+        z-index: 999;
+        border: none;
+        border-radius: 0;
     }
-    
+
     .nav-links.active {
-        transform: translateY(0);
+        transform: translateX(0);
         opacity: 1;
         pointer-events: auto;
     }
-    
-    .features-grid,
-    .vehicles-grid,
-    .packages-grid,
-    .reviews-slider {
-        grid-template-columns: 1fr;
+
+    .nav-links a {
+        font-size: 1.3rem;
+        letter-spacing: 2px;
     }
-    
+
+    .nav-links .nav-cta {
+        margin-top: 10px;
+        padding: 12px 30px;
+        font-size: 1.1rem;
+    }
+
+    /* === HERO === */
+    .hero-section {
+        align-items: flex-end;
+        padding-bottom: 60px;
+    }
+
+    .hero-content {
+        padding: 0 18px;
+    }
+
+    .hero-badge {
+        font-size: 0.72rem;
+        letter-spacing: 0.5px;
+        padding: 7px 14px;
+        max-width: 90vw;
+        white-space: normal;
+        text-align: center;
+        line-height: 1.4;
+    }
+
+    .hero-title {
+        font-size: 2.6rem;
+        letter-spacing: 1px;
+        line-height: 1.15;
+        margin-bottom: 14px;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 28px;
+        line-height: 1.6;
+    }
+
+    .hero-ctas {
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .hero-ctas .btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+        padding: 14px 24px;
+        font-size: 1rem;
+    }
+
+    /* === FEATURES === */
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .feature-card {
+        padding: 28px 22px;
+        text-align: left;
+        display: flex;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .feature-icon-wrapper {
+        flex-shrink: 0;
+        width: 52px;
+        height: 52px;
+        font-size: 1.4rem;
+        margin-bottom: 0;
+    }
+
+    .feature-card-title {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+    }
+
+    /* === FLEET === */
+    .vehicles-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-top: 30px;
+    }
+
+    .vehicle-img-wrapper {
+        height: 200px;
+    }
+
+    .filter-tabs {
+        gap: 8px;
+        margin-top: 20px;
+    }
+
+    .filter-tab {
+        padding: 6px 14px;
+        font-size: 0.8rem;
+    }
+
+    /* === PACKAGES === */
+    .packages-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .package-img-box {
+        height: 200px;
+    }
+
+    /* === BOOKING === */
+    .booking-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .booking-form-wrapper {
+        padding: 24px 18px;
+    }
+
+    .form-title {
+        font-size: 1.8rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 100%;
+    }
+
     .form-row-2 {
         grid-template-columns: 1fr;
-        gap: 15px;
+        gap: 14px;
     }
-    
+
+    .booking-stats-column {
+        order: -1;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    /* === REVIEWS === */
+    .reviews-slider {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    /* === FLIGHT SEARCH === */
+    .flights-search-card {
+        padding: 22px 18px;
+    }
+
+    .flights-form-row {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .flights-form-row .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 14px;
+    }
+
+    .fl-card {
+        grid-template-columns: 1fr;
+        padding: 18px;
+        gap: 16px;
+        text-align: left;
+    }
+
+    .fl-card-center {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    .fl-card-right {
+        text-align: left;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .fl-price {
+        font-size: 1.5rem;
+    }
+
+    /* === FAQ === */
+    .faq-list {
+        gap: 12px;
+    }
+
+    /* === FOOTER === */
     .footer-container {
         grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-bottom p {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .social-links {
+        gap: 14px;
     }
 }
+
+/* Extra small phones */
+@media (max-width: 380px) {
+    .hero-title {
+        font-size: 2.1rem;
+    }
+
+    .section-title {
+        font-size: 1.7rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 
 /* --- Flight Search Section --- */
 .flights-section {
