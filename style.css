@@ -1576,8 +1576,32 @@ body {
 
     /* === FOOTER === */
     .footer-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    /* Brand column spans both columns */
+    .footer-brand-column {
+        grid-column: 1 / -1;
+    }
+
+    /* Contact column spans both columns */
+    .footer-contact-column {
+        grid-column: 1 / -1;
+    }
+
+    /* Services and Destinations columns sit side by side */
+    .footer-links-column {
+        min-width: 0;
+    }
+
+    .footer-links-column .footer-heading {
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+    }
+
+    .footer-links-column .footer-links li a {
+        font-size: 0.85rem;
     }
 
     .footer-bottom p {
@@ -1589,6 +1613,7 @@ body {
         gap: 14px;
     }
 }
+
 
 /* Extra small phones */
 @media (max-width: 380px) {
