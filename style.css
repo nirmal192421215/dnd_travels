@@ -1358,36 +1358,93 @@ body {
 
     /* === FLEET === */
     .vehicles-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
         margin-top: 30px;
     }
 
     .vehicle-img-wrapper {
-        height: 200px;
+        height: 140px;
     }
 
-    .filter-tabs {
-        gap: 8px;
-        margin-top: 20px;
+    .vehicle-info {
+        padding: 14px;
     }
 
-    .filter-tab {
-        padding: 6px 14px;
-        font-size: 0.8rem;
+    .vehicle-name {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+
+    .vehicle-specs {
+        flex-direction: column;
+        gap: 5px;
+        font-size: 0.75rem;
+        margin-bottom: 14px;
+    }
+
+    .vehicle-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .price-val {
+        font-size: 1.4rem;
     }
 
     /* === PACKAGES === */
     .packages-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
 
     .package-img-box {
-        height: 200px;
+        height: 130px;
+    }
+
+    .package-body {
+        padding: 12px;
+    }
+
+    .package-title {
+        font-size: 0.95rem;
+        margin-bottom: 6px;
+    }
+
+    .package-desc {
+        font-size: 0.78rem;
+        margin-bottom: 10px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .package-inclusions {
+        display: none;
+    }
+
+    .package-price {
+        font-size: 1.15rem;
+    }
+
+    .package-price-row {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+
+    .package-price-row .btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        padding: 8px 12px;
+        font-size: 0.85rem;
     }
 
     /* === BOOKING === */
+
     .booking-grid {
         grid-template-columns: 1fr;
         gap: 30px;
