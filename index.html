@@ -34,6 +34,7 @@
                 <li><a href="#vehicles">Fleet</a></li>
                 <li><a href="#packages">Tour Packages</a></li>
                 <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#flights">Flights</a></li>
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="#booking" class="nav-cta">Book Now <i class="fa-brands fa-whatsapp"></i></a></li>
             </ul>
@@ -598,6 +599,36 @@
             </div>
         </div>
     </section>
+    <!-- Flight Search Section (Powered by Render API) -->
+    <section class="flights-section" id="flights">
+        <div class="section-container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Search <span class="text-gradient">Live Flights</span></h2>
+                <p class="section-subtitle">Powered by DND Travels AI Engine. Find the best flights to your destination instantly.</p>
+            </div>
+
+            <div class="flights-search-card glass-card">
+                <div class="flights-form-row">
+                    <div class="form-group">
+                        <label for="fl-origin"><i class="fa-solid fa-plane-departure"></i> From (IATA Code)</label>
+                        <input type="text" id="fl-origin" placeholder="e.g. MAA" maxlength="3">
+                    </div>
+                    <div class="form-group">
+                        <label for="fl-destination"><i class="fa-solid fa-plane-arrival"></i> To (IATA Code)</label>
+                        <input type="text" id="fl-destination" placeholder="e.g. DEL" maxlength="3">
+                    </div>
+                    <div class="form-group">
+                        <label for="fl-date"><i class="fa-regular fa-calendar-days"></i> Travel Date</label>
+                        <input type="date" id="fl-date">
+                    </div>
+                    <button class="btn btn-primary btn-glow" id="fl-search-btn" onclick="searchFlights()">
+                        <i class="fa-solid fa-magnifying-glass"></i> Search
+                    </button>
+                </div>
+                <div id="fl-results" class="flights-results"></div>
+            </div>
+        </div>
+    </section>
 
     <!-- FAQ Section -->
     <section class="faq-section" id="faq">
@@ -709,5 +740,72 @@
 
     <!-- Custom Script -->
     <script src="app.js?v=3"></script>
+    <script>
+    /* jshint esversion: 6 */
+    const RENDER_API_URL = "https://dnd-travels.onrender.com";
+
+    async function searchFlights() {
+        const origin = document.getElementById("fl-origin").value.trim().toUpperCase();
+        const destination = document.getElementById("fl-destination").value.trim().toUpperCase();
+        const date = document.getElementById("fl-date").value;
+        const resultsDiv = document.getElementById("fl-results");
+        const btn = document.getElementById("fl-search-btn");
+
+        if (!origin || !destination || !date || origin.length !== 3 || destination.length !== 3) {
+            resultsDiv.innerHTML = `<div class="fl-error"><i class="fa-solid fa-triangle-exclamation"></i> Please enter valid 3-letter airport codes and a date.</div>`;
+            return;
+        }
+
+        btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Searching...`;
+        btn.disabled = true;
+        resultsDiv.innerHTML = `<div class="fl-loading"><i class="fa-solid fa-circle-notch fa-spin"></i> Fetching live flights... (first load may take ~30s on free tier)</div>`;
+
+        try {
+            const response = await fetch(`${RENDER_API_URL}/api/flights?origin=${origin}&destination=${destination}&date=${date}`);
+            const data = await response.json();
+
+            if (!response.ok) {
+                resultsDiv.innerHTML = `<div class="fl-error"><i class="fa-solid fa-triangle-exclamation"></i> ${data.error}</div>`;
+                return;
+            }
+
+            if (data.flights.length === 0) {
+                resultsDiv.innerHTML = `<div class="fl-error">No flights found for this route.</div>`;
+                return;
+            }
+
+            resultsDiv.innerHTML = `
+                <div class="fl-results-header">
+                    <span><i class="fa-solid fa-check-circle" style="color:var(--secondary-cyan)"></i> ${data.results_count} flights found: ${origin} → ${destination}</span>
+                </div>
+                <div class="fl-cards">
+                    ${data.flights.map(f => `
+                        <div class="fl-card glass-card">
+                            <div class="fl-card-left">
+                                <div class="fl-carrier"><i class="fa-solid fa-plane"></i> ${f.carrier}</div>
+                                <div class="fl-flight-num">${f.flight_number}</div>
+                            </div>
+                            <div class="fl-card-center">
+                                <div class="fl-time">${f.departure_time.split('T')[1].slice(0,5)}</div>
+                                <div class="fl-route-line"><span>${f.origin}</span><i class="fa-solid fa-arrow-right"></i><span>${f.destination}</span></div>
+                                <div class="fl-time">${f.arrival_time.split('T')[1].slice(0,5)}</div>
+                            </div>
+                            <div class="fl-card-right">
+                                <div class="fl-stops">${f.stops === 0 ? 'Non-stop' : f.stops + ' stop'}</div>
+                                <div class="fl-duration">${Math.floor(f.duration_minutes/60)}h ${f.duration_minutes%60}m</div>
+                                <div class="fl-price">$${f.price_usd}</div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        } catch (err) {
+            resultsDiv.innerHTML = `<div class="fl-error"><i class="fa-solid fa-triangle-exclamation"></i> Could not connect to API. The free instance may be waking up — try again in 30 seconds.</div>`;
+        } finally {
+            btn.innerHTML = `<i class="fa-solid fa-magnifying-glass"></i> Search`;
+            btn.disabled = false;
+        }
+    }
+    </script>
 </body>
 </html>
