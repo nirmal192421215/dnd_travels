@@ -1,10 +1,14 @@
 services:
-  - type: cron
-    name: travel-flights-cron
+  - type: web
+    name: dnd-travels-api
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "python3 execution/search_flights.py --origin MAA --destination DEL --departure-date 2026-07-01"
-    schedule: "0 0 * * *" # Run daily at midnight
+    startCommand: "gunicorn api:app"
+    plan: free
     envVars:
       - key: PYTHON_VERSION
         value: 3.10.12
+      - key: OUTPUT_DIR
+        value: ./output
+      - key: LOG_LEVEL
+        value: INFO
